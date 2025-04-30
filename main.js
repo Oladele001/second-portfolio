@@ -8,7 +8,7 @@ toggleButton.addEventListener('click', () => {
   // Toggle dark mode class
   body.classList.toggle('bg-white');
   body.classList.toggle('text-black');
-  body.classList.toggle('bg-gray-900');
+  body.classList.toggle('bg-black');
   body.classList.toggle('text-white');
 
   // Change icon
