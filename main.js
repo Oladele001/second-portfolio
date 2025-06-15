@@ -34,40 +34,77 @@ const Submit = () => {
   ) {
     alert("FILL THE EMPTY SPACE 🥷");
   } else {
-    alert("WELL DONE 😎")
-      FullName.value = "",
-      Email.value = "",
-      Subject.value = "",
-      Message.value = "" 
+    alert("WELL DONE 😎");
+    (FullName.value = ""),
+      (Email.value = ""),
+      (Subject.value = ""),
+      (Message.value = "");
   }
 };
 
-const mobileMenuButton = document.getElementById("mobile-menu-button");
-const mobileMenu = document.getElementById("mobile-menu");
+// const mobileMenuButton = document.getElementById("mobile-menu-button");
+// const mobileMenu = document.getElementById("mobile-menu");
 
-mobileMenuButton.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+// mobileMenuButton.addEventListener("click", () => {
+//   mobileMenu.classList.toggle("hidden");
+// });
+
+// const themeBox = document.getElementById("themeBox");
+// const toggleBtn = document.getElementById("toggleBtn");
+// const toggleIcon = document.getElementById("toggleIcon");
+
+// toggleBtn.addEventListener("click", () => {
+//   // Toggle theme styles
+//   themeBox.classList.toggle("bg-white");
+//   themeBox.classList.toggle("bg-black");
+//   themeBox.classList.toggle("text-black");
+//   themeBox.classList.toggle("text-white");
+
+//   // Change icon
+//   const current = toggleIcon.getAttribute("data-lucide");
+//   const newIcon = current === "moon" ? "sun" : "moon";
+//   toggleIcon.setAttribute("data-lucide", newIcon);
+
+//   // Re-render the new icon
+//   lucide.createIcons();
+// });
+
+// // Initial render
+// lucide.createIcons();
+
+//toogle icon
+
+// const toggleButton = document.getElementById("themeToggle");
+// const body = document.body;
+
+// toggleButton.addEventListener("click", () => {
+//   body.classList.toggle("dark-theme");
+//   toggleButton.textContent = body.classList.contains("dark-theme")
+//     ? "🌌"
+//     : "🌙";
+// });
+
+//  function toggleMenu() {
+//     const menu = document.getElementById('navMenu');
+//     const hamburger = document.querySelector('.hamburger');
+//     menu.classList.toggle('active');
+//     hamburger.classList.toggle('active');
+//   }
+
+
+
+
+const menuIcon = document.getElementById("menu-icon");
+const menuBox = document.getElementById("menu-box");
+
+menuIcon.addEventListener("click", () => {
+  menuBox.classList.toggle("show");
 });
 
-const themeBox = document.getElementById("themeBox");
-const toggleBtn = document.getElementById("toggleBtn");
-const toggleIcon = document.getElementById("toggleIcon");
-
-toggleBtn.addEventListener("click", () => {
-  // Toggle theme styles
-  themeBox.classList.toggle("bg-white");
-  themeBox.classList.toggle("bg-black");
-  themeBox.classList.toggle("text-black");
-  themeBox.classList.toggle("text-white");
-
-  // Change icon
-  const current = toggleIcon.getAttribute("data-lucide");
-  const newIcon = current === "moon" ? "sun" : "moon";
-  toggleIcon.setAttribute("data-lucide", newIcon);
-
-  // Re-render the new icon
-  lucide.createIcons();
+// Close menu when clicking a link
+const links = menuBox.querySelectorAll("a");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuBox.classList.remove("show");
+  });
 });
-
-// Initial render
-lucide.createIcons();
